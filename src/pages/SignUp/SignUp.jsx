@@ -2,9 +2,10 @@ import React, {useState} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import styles from './styles.module.css'
 import axios from 'axios'
-import USER_SERVICE_API_URL from '../../config';
+import config from '../../config';
 
 const SignUp = () => {
+    const USER_SERVICE_API_URL = config.USER_SERVICE_API_URL
 	const [Values, setValues] = useState ({
 		username: '',
 		email: '',
