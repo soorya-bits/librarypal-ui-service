@@ -1,0 +1,27 @@
+.content {
+  height: 85vh; /* Full height minus navbar and footer */
+  background-image: url('./bgmhero-1.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  /*align-items: center; Center horizontally */
+  text-align: center; /* Center text content */
+  margin-bottom: -95px;
+  margin-top: 95px;
+}
+
+h1 {
+   
+  margin-bottom: 8px;
+}
+
+p {
+  margin-bottom: 10px; 
+}
