@@ -3,12 +3,10 @@ import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
 import { MdOutlineSegment } from 'react-icons/md'
 import { useState, useEffect } from 'react'
-import { useAuth0 } from "@auth0/auth0-react";
 import config from '../../config'
 
 const Navbar = () => {
     const USER_SERVICE_API_URL = config.USER_SERVICE_API_URL
-    const { logout } = useAuth0()
     const navigate = useNavigate()
     const [showMenu, setShowMenu] = useState(false);
     const links = [
@@ -32,8 +30,9 @@ const Navbar = () => {
     const [MobileNav, setMobileNav] = useState('hidden')   
 
     const handleLogout = () => {
+        localStorage.removeItem('id')
         localStorage.removeItem('token')
-        logout({ returnTo: window.location.origin }) 
+        window.location = '/'
         setIsLoggedIn(false)
     }
 
