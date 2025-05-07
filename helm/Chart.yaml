@@ -1,0 +1,5 @@
+apiVersion: v2
+name: librarypal-ui-service
+description: Helm chart for the UI of LibraryPal
+version: 0.1.0
+appVersion: "1.0.0"
